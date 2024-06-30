@@ -1,5 +1,5 @@
 module "vpc" {
-  source = "https://github.com/balubadi/tf-module-vpc1.git"
+  source = "git::https://github.com/balubadi/tf-module-vpc1.git"
   env    = var.env
   tags   = var.tags
   vpc_cidr_block = var.vpc_cidr_block
