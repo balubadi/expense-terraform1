@@ -10,7 +10,6 @@ module "vpc" {
 
   env                    = var.env
   tags                   = var.tags
-  default_vpc_cidr       = var.default_vpc_cidr
   default_vpc_id         = var.default_vpc_id
   account_id             = var.account_id
   default_route_table_id = var.default_route_table_id
