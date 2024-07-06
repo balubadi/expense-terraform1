@@ -16,17 +16,18 @@ module "vpc" {
   account_id             = var.account_id
   default_route_table_id = var.default_route_table_id
 }
+
 module "eks" {
   source = "git::https://github.com/balubadi/tf-module-eks.git"
 
-  for_each       = var.eks
-  node_count     = each.value["node_count"]
+  for_each      = var.eks
+  node_count    = each.value["node_count"]
   instance_types = each.value["instance_types"]
 
-  env  = var.env
-  tags = var.tags
-  kms  = var.kms
+  env             = var.env
+  tags            = var.tags
+  kms             = var.kms
 
-  subnets = lookup(lookup(module.vpc, "main", null), "app_subnets", null)
-  vpc_id = lookup(lookup(module.vpc, "main", null), "vpc_id", null)
+  subnets  = lookup(lookup(module.vpc, "main", null), "app_subnets", null)
+  vpc_id   = lookup(lookup(module.vpc, "main", null), "vpc_id", null)
 }
