@@ -10,5 +10,6 @@ module "vpc" {
   web_subnets = var.web_subnets
   account_id = var.account_id
   default_route_table_id = var.default_route_table_id
+  default_vpc_id = var.default_vpc_id
 }
 
