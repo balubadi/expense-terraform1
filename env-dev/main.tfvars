@@ -2,7 +2,7 @@ env = "dev"
 tags = {
   company      = "XYZ Co"
   bu_unit      = "Ecommerce"
-  project_name = "roboshop"
+  project_name = "bpk-groups"
 }
 account_id             = "590183663994"
 default_vpc_id         = "vpc-0bb6c1de1ffb3af1c"
