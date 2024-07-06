@@ -26,7 +26,7 @@ module "eks" {
 
   env             = var.env
   tags            = var.tags
-  kms             = var.kms
+
 
   subnets  = lookup(lookup(module.vpc, "main", null), "app_subnets", null)
   vpc_id   = lookup(lookup(module.vpc, "main", null), "vpc_id", null)
