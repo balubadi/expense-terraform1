@@ -8,3 +8,4 @@ variable "default_vpc_cidr" {}
 variable "vpc" {}
 variable "route53_zone_id" {}
 variable "eks" {}
+variable "kms" {}
