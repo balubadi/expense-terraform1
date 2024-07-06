@@ -1,16 +1,17 @@
-module "vpc" {
-  source = "git::https://github.com/balubadi/tf-module-vpc1.git"
-  for_each       = var.vpc
-  vpc_cidr_block = each.value["vpc_cidr_block"]
-  public_subnets = each.value["public_subnets"]
-  web_subnets    = each.value["web_subnets"]
-  app_subnets    = each.value["app_subnets"]
-  db_subnets     = each.value["db_subnets"]
-  azs            = each.value["azs"]
 
+module "vpc" {
+  source                 = "git::https://github.com/balubadi/tf-module-vpc1.git"
+  vpc_cidr_block         = var.vpc_cidr_block
   env                    = var.env
   tags                   = var.tags
-  default_vpc_id         = var.default_vpc_id
+  public_subnets         = var.public_subnets
+  web_subnets            = var.web_subnets
+  app_subnets            = var.app_subnets
+  db_subnets             = var.db_subnets
+  azs                    = var.azs
   account_id             = var.account_id
+  default_vpc_id         = var.default_vpc_id
   default_route_table_id = var.default_route_table_id
+  default_vpc_cidr       = var.default_vpc_cidr
 }
+
