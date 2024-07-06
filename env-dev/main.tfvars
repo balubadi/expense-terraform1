@@ -20,3 +20,10 @@ vpc = {
     azs            = ["us-east-1a", "us-east-1b"]
   }
 }
+
+eks = {
+  main = {
+    node_count = 1
+    instance_types = ["t3.large"]
+  }
+}
