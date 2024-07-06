@@ -9,6 +9,7 @@ default_vpc_id         = "vpc-0bb6c1de1ffb3af1c"
 default_route_table_id = "rtb-0680407b075e837d2"
 default_vpc_cidr       = "172.31.0.0/16"
 route53_zone_id        = "Z056640310WRA9RUJKYKR"
+kms                    = "arn:aws:kms:us-east-1:590183663994:key/c54abc7f-81ac-4aab-b31e-423aa929a738"
 
 vpc = {
   main = {
